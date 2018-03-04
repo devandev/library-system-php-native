@@ -1,0 +1,261 @@
+/*
+=========================================
+custom style
+=========================================
+*/
+html{
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+.wraper{
+    width: 100%;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.container{
+    width: 100%;
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*
+=========================================
+login style
+=========================================
+*/
+
+.img-container{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-image: url("../img/login.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.img-container::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 55, 200, 0.3);
+}
+
+form#login{
+    border-radius: 1.5rem;
+    background-color: white;
+    padding: 3rem 2rem 1rem 2rem ;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 40%;
+    display: block;
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+form#login input,
+form#login select,
+form#login input[type="submit"]{
+    margin: 1rem 0 1rem 0;
+    padding: 0.7rem 0.1rem 0.7rem 0.1rem;
+    border-radius: 0.3rem;
+}
+
+
+form#login input{
+    width: 99%;
+    border: 1px solid gray;
+}
+
+form#login select{
+    width: 100%;
+}
+
+form#login input[type="submit"]{
+    width: 100%;
+    background:linear-gradient(to bottom right, lightgreen ,green);
+    border:1px solid green;
+    cursor: pointer;
+    color:white;
+}
+
+#logo-login{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: auto;
+    max-width: 7rem;
+    display: block;
+}
+
+/*
+=========================================
+daftar style
+=========================================
+*/
+.background-form{
+    display: none;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+form#daftar{
+    display: none;
+    border-radius: 1.5rem;
+    background-color: white;
+    padding: 1.5rem 2rem 1rem 2rem ;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 40%;
+    position: absolute;
+    top:10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.btn_close{
+    position: absolute;
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+    top: 30px;
+    right: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form#daftar input,
+form#daftar input[type="submit"]{
+    margin: 1rem 0 1rem 0;
+    padding: 0.7rem 0.1rem 0.7rem 0.1rem;
+    border-radius: 0.3rem;
+}
+
+form#daftar input{
+    width: 99%;
+    border: 1px solid gray;
+}
+
+form#daftar input[type="submit"]{
+    width: 100%;
+    background:linear-gradient(to bottom right, lightgreen ,green);
+    border:1px solid green;
+    cursor: pointer;
+    color:white;
+}
+
+
+/*
+=========================================
+navbar style
+=========================================
+*/
+.user{
+    font-weight: bold;
+}
+
+nav ul{
+    list-style-type: none;
+    background-color:aqua;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li:last-child{
+    float: right;
+}
+
+nav ul li a{
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color:#008b8b;
+}
+
+nav ul li a#logo-nav{
+    background-color: #008b8b;
+    color: cyan;
+    padding-bottom: 1.7rem;
+}
+
+#logo-nav::before{
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-top: -10px;
+    margin-bottom: -14px;
+    background-image: url("../img/logonavuser.svg");
+}
+
+
+#logout::before,
+#home-nav::before,
+#member-nav::before,
+#admin-nav::before{
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    background-position: left center;
+    margin-bottom: -6px;
+}
+
+#logout::before{
+    background-image: url("../img/logologout.svg");
+}
+
+#home-nav::before{
+    background-image: url("../img/logohome.svg");
+}
+
+#member-nav::before{
+    background-image: url("../img/logomember.svg");
+}
+
+#admin-nav::before{
+    background-image: url("../img/logoadmin.svg");
+}
+
+
+/*
+=========================================
+home admin style
+=========================================
+*/
+
+
