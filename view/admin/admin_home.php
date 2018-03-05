@@ -28,9 +28,9 @@
         if(mysqli_num_rows($result) > 0){ 
             $row = mysqli_fetch_array($result);
         } 
-    ?>
+    ?>      
             <li><a id= "logo-nav" href="#">Welcome back <span class="user"><?php print $row[0] ;?></span></a></li>
-            <li><a id= "home-nav" href="http://">Home</a></li>
+            <li><a id= "home-nav" href="crudMember/select.php">Home</a></li>
             <li><a id="member-nav" href="http://">Member List</a></li>
             <li><a id="admin-nav" href="http://">Admin List</a></li>
             <li><a id="logout" href="../../proccess/logout.php">logout</a></li>
