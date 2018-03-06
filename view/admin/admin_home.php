@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <header>
-
-    </header>
     <nav>
         <ul>
     <?php
@@ -30,21 +27,19 @@
         } 
     ?>      
             <li><a id= "logo-nav" href="#">Welcome back <span class="user"><?php print $row[0] ;?></span></a></li>
-            <li><a id= "home-nav" href="crudMember/select.php">Home</a></li>
-            <li><a id="member-nav" href="http://">Member List</a></li>
+            <li><a id= "home-nav" href="#">Home</a></li>
+            <li><a id="member-nav" href="crudMember/select_Member.php">Member List</a></li>
             <li><a id="admin-nav" href="http://">Admin List</a></li>
             <li><a id="logout" href="../../proccess/logout.php">logout</a></li>
         </ul>
     </nav>
-
+    <?php include_once("../header.php") ?>
     <div class="container">
         <h1>hallo admin</h1>
     </div>
-    <footer>
-    
-    </footer>
     <?php
         mysqli_close($conn);
+        include_once("../footer.php")
     ?>
     <script src="../../js/jquery-3.1.1.js"></script>
     <script src="../../js/script.js"></script>    
