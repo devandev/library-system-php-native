@@ -33,6 +33,42 @@ body{
     margin: 0 auto;
 }
 
+/*
+=========================================
+header and footer style
+=========================================
+*/
+header,
+footer{
+    display: block;
+    margin: 0 auto;
+    background-color: #31dddd;
+    width: 100%;
+}
+
+header{
+    padding: 3rem 0 3rem 0;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 0 1rem 0; 
+}
+
+.theTitle h1, h4{
+    text-align: center;
+    margin: 0;
+    color: #008b8b;
+}
+
+.footer_title h5{
+    text-align: center;
+    color: #008b8b;
+}
+
+
+
 
 /*
 =========================================
@@ -249,6 +285,41 @@ nav ul li a#logo-nav{
 
 #admin-nav::before{
     background-image: url("../img/logoadmin.svg");
+}
+
+/*
+=========================================
+table style
+=========================================
+*/
+
+.tb-select{
+    display: block;
+    margin: 0 auto;
+    border-collapse: collapse;
+    
+}
+
+.tb-title{
+    position: relative;
+}
+
+.btn-tambah-data{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+th,
+td{
+    border:2px solid #0d7272;
+}
+th{
+    padding: 0.7rem;
+}
+
+td{
+    padding: 0.5rem;
 }
 
 
