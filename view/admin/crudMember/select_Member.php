@@ -17,14 +17,14 @@
 <body>
     <?php include_once("../../header.php") ?>
     <div class="background-form">
-        <form class="add-form" action="" method="post">
+        <form class="add-form" action="data_insertM.php" method="post">
             <h2>Tambah Anggota</h2>
             <button class="btn_close">x</button>
             <input type="number" name="id_anggota" placeholder="Id Anggota :" disabled>
-            <input type="text" name="nama_anggota" placeholder="Nama Anggota :">
-            <input type="password" name="password_anggota" placeholder="Password Anggota :">
-            <input type="text" name="alamat_anggota" placeholder="Alamat Anggota :">
-            <input type="telp" name="telp_anggota" placeholder="Telp">
+            <input type="text" name="nama_anggota" placeholder="Nama Anggota :" required>
+            <input type="password" name="password_anggota" placeholder="Password Anggota :" required>
+            <input type="text" name="alamat_anggota" placeholder="Alamat Anggota :" required>
+            <input type="telp" name="telp_anggota" placeholder="Telp" required>
             <input type="submit" id="btn_submit" name="btn_submit" value="Tambah">
         </form>
     </div>
