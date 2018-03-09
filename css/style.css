@@ -154,12 +154,16 @@ daftar style
 */
 .background-form{
     display: none;
-    position: relative;
+    position: absolute;
+    top:0;
+    bottom: 0;
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 2;
+    z-index: 1;
 }
+
+
 
 form#daftar{
     display: none;
@@ -322,6 +326,70 @@ td{
     padding: 0.5rem;
 }
 
+/*
+=========================================
+crud container style
+=========================================
+*/
+
+/*.crud-container{
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}*/
+
+form.add-form{
+    width: 100%;
+    max-width: 50%;
+    display: block;
+    padding: 1rem 1rem 1rem 0.3rem;
+    margin: 4rem auto;
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+}
+
+form.add-form input{
+   box-sizing: border-box;
+   width: 100%;
+   padding: 0.5rem 0 0.5rem 0.3rem;
+   margin: 0.3rem;
+}
+
+
+.background-form-up{
+    display: none;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+
+form.update-form{
+    width: 100%;
+    max-width: 50%;
+    display: block;
+    padding: 1rem 1rem 1rem 0.3rem;
+    margin: 4rem auto;
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+}
+
+form.update-form input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0.3rem;
+    margin: 0.3rem;
+ }
 
 /*
 =========================================
