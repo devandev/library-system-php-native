@@ -51,9 +51,8 @@ header{
 }
 
 footer{
-    position: absolute;
-    bottom: 0;
     padding: 1rem 0 1rem 0; 
+    margin-top:5rem;
 }
 
 .theTitle h1, h4{
@@ -157,7 +156,7 @@ daftar style
     position: absolute;
     top:0;
     bottom: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
