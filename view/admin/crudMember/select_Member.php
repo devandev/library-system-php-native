@@ -1,5 +1,5 @@
 <?php
-    include_once("../../../proccess/connect.php");
+    
     session_start();
     if($_SESSION["id"] == ""){
         header("location:../../../index.php");
@@ -16,44 +16,40 @@
 </head>
 <body>
     <?php include_once("../../header.php") ?>
-    <div class="container">
-    <?php
-        $sql = "SELECT * FROM tb_anggota";
-        $result = mysqli_query($conn,$sql);
-        //var_dump($result);
-        if(mysqli_num_rows($result) > 0){ ?>
-        <div class="tb-container">
-            <div class="tb-title">
-                <h2>Anggota Perpustakaan</h2>
-                <button class="btn-tambah-data">Tambah</button>
-            </div>
-            <table class="tb-select">
-                <tr>
-                    <th>Id Anggota</th>
-                    <th>Nama Anggota</th>
-                    <th>Password Anggota</th>
-                    <th>Alamat Anggota</th>
-                    <th>Telp Anggota</th>
-                    <th>Edit</th>
-                    <th>Hapus</th>
-
-                </tr>
-                <?php 
-                while($row = mysqli_fetch_array($result)){ ?>
-                        <tr>
-                            <td><?php echo $row[0];?></td>
-                            <td><?php echo $row[1];?></td>
-                            <td><?php echo $row[2];?></td>
-                            <td><?php echo $row[3];?></td>
-                            <td><?php echo $row[4];?></td>
-                            <td><a href="#">Edit</a></td>
-                            <td><a href="#">Hapus</a></td>
-                        </tr>
-  <?php         } 
-        } ?>
-            </table>
-        </div>    
+    <div class="background-form">
+        <form class="add-form" action="" method="post">
+            <h2>Tambah Anggota</h2>
+            <button class="btn_close">x</button>
+            <input type="number" name="id_anggota" placeholder="Id Anggota :" disabled>
+            <input type="text" name="nama_anggota" placeholder="Nama Anggota :">
+            <input type="password" name="password_anggota" placeholder="Password Anggota :">
+            <input type="text" name="alamat_anggota" placeholder="Alamat Anggota :">
+            <input type="telp" name="telp_anggota" placeholder="Telp">
+            <input type="submit" id="btn_submit" name="btn_submit" value="Tambah">
+        </form>
     </div>
+
+    <div class="background-form-up">
+        <form class="update-form" action="" method="post">
+            <h2>Edit Anggota</h2>
+            <button class="btn_close">x</button>
+            <input type="number" name="id_anggota" placeholder="Id Anggota :" disabled>
+            <input type="text" name="nama_anggota" placeholder="Nama Anggota :">
+            <input type="password" name="password_anggota" placeholder="Password Anggota :">
+            <input type="text" name="alamat_anggota" placeholder="Alamat Anggota :">
+            <input type="telp" name="telp_anggota" placeholder="Telp">
+            <input type="submit" name="btn_submit" value="Tambah">
+        </form>
+    </div>
+
+    
+        
+    <div class="container">
+    
+        
+    </div>
+    <script src="../../../js/jquery-3.1.1.js"></script>
+    <script src="../../../js/script.js"></script>
     <?php include_once("../../footer.php") ?>
 </body>
 </html>
