@@ -30,24 +30,23 @@
     </div>
 
     <div class="background-form-up">
-        <form class="update-form" action="" method="post">
+        <form class="update-form" action="data_selectMDt.php" method="post">
             <h2>Edit Anggota</h2>
             <button class="btn_close">x</button>
-            <input type="number" name="id_anggota" placeholder="Id Anggota :" disabled>
-            <input type="text" name="nama_anggota" placeholder="Nama Anggota :">
-            <input type="password" name="password_anggota" placeholder="Password Anggota :">
-            <input type="text" name="alamat_anggota" placeholder="Alamat Anggota :">
-            <input type="telp" name="telp_anggota" placeholder="Telp">
-            <input type="submit" name="btn_submit" value="Tambah">
+            <input type="number" name="id_anggota" id="id_anggota" hidden>
+            <input type="text" name="nama_anggota" id="nama_anggota" placeholder="Nama Anggota :">
+            <input type="text" name="password_anggota" id="password_anggota" placeholder="Password Anggota :">
+            <input type="text" name="alamat_anggota" id="alamat_anggota" placeholder="Alamat Anggota :">
+            <input type="telp" name="telp_anggota" id="telp_anggota" placeholder="Telp"git >
+            <input type="submit" name="btn_update" id="btn_update" value="Update">
         </form>
     </div>
 
     
         
     <div class="container">
-    
-        
     </div>
+
     <script src="../../../js/jquery-3.1.1.js"></script>
     <script src="../../../js/script.js"></script>
     <?php include_once("../../footer.php") ?>
