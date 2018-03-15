@@ -89,7 +89,24 @@ $(document).ready(function(){
 
     
 
-    
+    $(document).on("click",".btn_delete", function(){
+        var currentRow = $(this).closest("tr"); 
+        var col1 = currentRow.find("td:eq(0)").text();
+        //console.log(col1);
+        //variable col1 berisi nilai nilai
+        //apa
+           $.post("data_deleteMDt.php",
+            {
+                "id_anggota" : col1
+            },
+            function(data){
+                loaddata();
+            });
+    });
+
+
+
+
 
     btnClose.on("click", function(){
         $(".background-form").hide();
