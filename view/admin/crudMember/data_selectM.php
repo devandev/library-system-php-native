@@ -30,7 +30,7 @@
                             <td><?php echo $row[3];?></td>
                             <td><?php echo $row[4];?></td>
                             <td><a class="btn_update" id="<?php echo $row[0]?>" href="#">Edit</a></td>
-                            <td><a href="#">Hapus</a></td>
+                            <td><a class="btn_delete" id="<?php echo $row[0]?>" href="#">Hapus</a></td>
                         </tr>
   <?php         } 
         } ?>
