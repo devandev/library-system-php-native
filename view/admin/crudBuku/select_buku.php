@@ -19,11 +19,11 @@
         <form class="add-form" action="data_insertM.php" method="post">
             <h2>Tambah Anggota</h2>
             <button class="btn_close">x</button>
-            <input type="number" name="id_buku" placeholder="Id Buku :" disabled>
-            <input type="text" name="nama_buku" placeholder="Nama Buku :" required>
-            <input type="text" name="jenis_Buku" placeholder="Jenis Buku :" required>
-            <input type="text" name="penerbit" placeholder="Penerbit :" required>
-            <input type="telp" name="penyusun" placeholder="Penyusun :" required>
+            <input type="number" name="id_buku" id="id_buku" placeholder="Id Buku :" disabled>
+            <input type="text" name="nama_buku" id="nama_buku" placeholder="Nama Buku :" required>
+            <input type="text" name="jenis_buku" id="jenis_buku" placeholder="Jenis Buku :" required>
+            <input type="text" name="penerbit" id="penerbit" placeholder="Penerbit :" required>
+            <input type="telp" name="penyusun" id="penyusun" placeholder="Penyusun :" required>
             <input type="submit" id="btn_submit" name="btn_submit" value="Tambah">
         </form>
     </div>
@@ -47,6 +47,7 @@
     </div>
 
     <script src="../../../js/jquery-3.1.1.js"></script>
+    <script src="../../../js/script.js"></script>
     <script src="../../../js/book.js"></script>
     <?php include_once("../../footer.php") ?>
 </body>
