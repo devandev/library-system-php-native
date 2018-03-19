@@ -8,6 +8,7 @@ $(document).ready(function(){
     }
     loadbook();
 
+    //ajax function to adding data
     var btnSubmit = $('#btn_submit');
     btnSubmit.on("click", function(e){
         var nama = $('#nama_buku').val();
@@ -32,6 +33,30 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+    $(document).on('click','.btn_update', function(){
+        var currentRow=$(this).closest("tr"); 
+        var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+        var col2=currentRow.find("td:eq(1)").text(); // get current row 2nd TD
+        var col3=currentRow.find("td:eq(2)").text();
+        var col4=currentRow.find("td:eq(3)").text();
+        var col5=currentRow.find("td:eq(4)").text();
+        console.log(col1);
+
+        $('#id_buku_up').val(col1);
+        $('#nama_buku_up').val(col2);
+        $('#jenis_buku_up').val(col3);
+        $('#penerbit_up').val(col4);
+        $('#penyusun_up').val(col5);
+        $('.background-form-up').show();
+    });
+
+    var btnUpdate = $('#btn_submit_up');
+    btnUpdate.on('submit',function(){
+        //comming soon
+    });
+
+
+    //ajax function por deleting data
     $(document).on('click','.btn_delete', function(){
         var tr = $(this).closest("tr"); 
         var id = tr.find("td:eq(0)").text();
