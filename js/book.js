@@ -40,7 +40,6 @@ $(document).ready(function(){
         var col3=currentRow.find("td:eq(2)").text();
         var col4=currentRow.find("td:eq(3)").text();
         var col5=currentRow.find("td:eq(4)").text();
-        console.log(col1);
 
         $('#id_buku_up').val(col1);
         $('#nama_buku_up').val(col2);
@@ -52,7 +51,20 @@ $(document).ready(function(){
 
     var btnUpdate = $('#btn_submit_up');
     btnUpdate.on('submit',function(){
-        //comming soon
+        console.log('update');
+        var currentRow=$(this).closest("tr"); 
+        var col1=currentRow.find("td:eq(0)").text();
+        $.post('data_updateB.php',
+        {
+            id_buku : col1,
+            nama_buku : col2,
+            jenis_buku : col3,
+            penerbit : col4,
+            penyusun :col5
+        },
+        function(data){
+            loadbook();
+        });
     });
 
 
@@ -68,5 +80,4 @@ $(document).ready(function(){
             loadbook();
         });
     });
-
 });
