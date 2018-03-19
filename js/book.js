@@ -4,22 +4,9 @@ $(document).ready(function(){
         $.get('data_selectB.php',
         function(data){
             $('.container').html(data);
-            console.log("function is load");
         });
     }
     loadbook();
-
-
-    //adding a function to btn tambah data
-    $(document).on('click','.btn-tambah-data', function(){
-        $('.background-form').show();
-    });
-
-    //adding a function to btn close
-    var btnclose = $('.btn_close');
-    btnclose.on('click', function(){
-        $('.background-form').hide();
-    });
 
     var btnSubmit = $('#btn_submit');
     btnSubmit.on("click", function(e){
@@ -36,9 +23,25 @@ $(document).ready(function(){
         },
         function(data){
             loadbook();
+            $('.background-form').hide();
+            var nama = $('#nama_buku').val("");
+            var jenis = $('#jenis_buku').val("");
+            var penerbit = $('#penerbit').val("");
+            var penyusun = $('#penyusun').val("");
         });
         e.preventDefault();
-        $('.background-form').hide();
+    });
+
+    $(document).on('click','.btn_delete', function(){
+        var tr = $(this).closest("tr"); 
+        var id = tr.find("td:eq(0)").text();
+        $.post('data_deleteB.php',
+        {
+            id_buku : id
+        },
+        function(data){
+            loadbook();
+        });
     });
 
 });
