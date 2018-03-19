@@ -16,8 +16,8 @@
 <body>
     <?php include_once("../../header.php") ?>
     <div class="background-form">
-        <form class="add-form" action="data_insertM.php" method="post">
-            <h2>Tambah Anggota</h2>
+        <form class="add-form" method="post">
+            <h2>Tambah Buku</h2>
             <button class="btn_close">x</button>
             <input type="number" name="id_buku" id="id_buku" placeholder="Id Buku :" disabled>
             <input type="text" name="nama_buku" id="nama_buku" placeholder="Nama Buku :" required>
@@ -29,15 +29,15 @@
     </div>
 
     <div class="background-form-up">
-        <form class="update-form" action="data_selectMDt.php" method="post">
-            <h2>Edit Anggota</h2>
+        <form class="update-form" method="post">
+            <h2>Edit Buku</h2>
             <button class="btn_close">x</button>
-            <input type="number" name="id_anggota" id="id_anggota" hidden>
-            <input type="text" name="nama_anggota" id="nama_anggota" placeholder="Nama Anggota :">
-            <input type="text" name="password_anggota" id="password_anggota" placeholder="Password Anggota :">
-            <input type="text" name="alamat_anggota" id="alamat_anggota" placeholder="Alamat Anggota :">
-            <input type="telp" name="telp_anggota" id="telp_anggota" placeholder="Telp"git >
-            <input type="submit" name="btn_update" id="btn_update" value="Update">
+            <input type="number" name="id_buku" id="id_buku_up" placeholder="Id Buku :" hidden>
+            <input type="text" name="nama_buku" id="nama_buku_up" placeholder="Nama Buku :" required>
+            <input type="text" name="jenis_buku" id="jenis_buku_up" placeholder="Jenis Buku :" required>
+            <input type="text" name="penerbit" id="penerbit_up" placeholder="Penerbit :" required>
+            <input type="telp" name="penyusun" id="penyusun_up" placeholder="Penyusun :" required>
+            <input type="submit" id="btn_submit_up" name="btn_submit" value="Tambah">
         </form>
     </div>
 
