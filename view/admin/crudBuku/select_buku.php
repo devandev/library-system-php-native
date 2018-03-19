@@ -29,7 +29,7 @@
     </div>
 
     <div class="background-form-up">
-        <form class="update-form" method="post">
+        <form class="update-form" method="post" action="data_updateB.php">
             <h2>Edit Buku</h2>
             <button class="btn_close">x</button>
             <input type="number" name="id_buku" id="id_buku_up" placeholder="Id Buku :" hidden>
@@ -37,7 +37,7 @@
             <input type="text" name="jenis_buku" id="jenis_buku_up" placeholder="Jenis Buku :" required>
             <input type="text" name="penerbit" id="penerbit_up" placeholder="Penerbit :" required>
             <input type="telp" name="penyusun" id="penyusun_up" placeholder="Penyusun :" required>
-            <input type="submit" id="btn_submit_up" name="btn_submit" value="Tambah">
+            <input type="submit" id="btn_submit_up" name="btn_update" value="Tambah">
         </form>
     </div>
 
