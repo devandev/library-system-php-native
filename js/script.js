@@ -10,7 +10,7 @@ $(document).ready(function(){
         $(".background-form").show();
     });
 
-
+    
     btnClose.on("click", function(){
         $(".background-form").hide();
     });

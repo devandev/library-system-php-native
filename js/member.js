@@ -45,14 +45,6 @@ $(document).ready(function(){
     });
 
     $("#update-form").on("submit",function(e){
-        // $.ajax({
-        //     url : $(this).attr("action"),
-        //     type : $(this).attr("method"),
-        //     data : $(this).serialize(),
-        //     success : function(){
-        //         loaddata();
-        //     }
-        // });
         $.ajax({
             type:'post',
             url : 'data_selectMDt.php',// The file where my php code is
