@@ -29,7 +29,8 @@
             <li><a id= "logo-nav" href="#">Welcome back <span class="user"><?php print $row[0] ;?></span></a></li>
             <li><a id= "home-nav" href="#">Home</a></li>
             <li><a id="member-nav" href="crudMember/select_Member.php">Member List</a></li>
-            <li><a id="admin-nav" href="#">Admin List</a></li>
+            <li><a id="admin-nav" href="crudBuku/select_buku.php">Buku List</a></li>
+            <li><a id="admin-nav" href="crudTransaksi/select_transaksi.php">Transaksi List</a></li>
             <li><a id="logout" href="../../proccess/logout.php">logout</a></li>
         </ul>
     </nav>
