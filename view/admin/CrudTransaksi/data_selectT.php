@@ -5,7 +5,7 @@ $result = mysqli_query($conn,$sql);
 if($result == true){ ?>
         <div class="tb-container">
             <div class="tb-title">
-                <h2>Anggota Perpustakaan</h2>
+                <h2>Transaksi Perpustakaan</h2>
                 <button class="btn-tambah-data">Tambah</button>
             </div>
                 <table class="tb-select">
