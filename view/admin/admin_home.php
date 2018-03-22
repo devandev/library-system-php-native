@@ -35,14 +35,16 @@
         </ul>
     </nav>
     <?php include_once("../header.php") ?>
+
     <div class="container">
-        <h1>hallo admin</h1>
+        
     </div>
     <?php
         mysqli_close($conn);
         include_once("../footer.php")
     ?>
     <script src="../../js/jquery-3.1.1.js"></script>
-    <script src="../../js/script.js"></script>    
+    <script src="../../js/script.js"></script>
+    <script src="../../js/pinjaman.js"></script>    
 </body>
 </html>
