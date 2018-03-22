@@ -43,7 +43,9 @@
     </div>
 
     
-        
+    <div>
+        <a href="../admin_home.php">< back To Home</a>
+    </div>    
     <div class="container">
     </div>
 
