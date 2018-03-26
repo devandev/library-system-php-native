@@ -118,8 +118,8 @@
             <input type="submit" id="btn_update" name="btn_update" value="Update">
         </form>
     </div>
-    <div>
-        <a href="../admin_home.php">< back To Home</a>
+    <div class="btn-back">
+        <a href="../admin_home.php">&laquo; back</a>
     </div> 
     <div class="container">
     </div>
