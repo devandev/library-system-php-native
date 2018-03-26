@@ -43,9 +43,9 @@
     </div>
 
     
-    <div>
-        <a href="../admin_home.php">< back To Home</a>
-    </div>    
+    <div class="btn-back">
+        <a href="../admin_home.php">&laquo; back</a>
+    </div>   
     <div class="container">
     </div>
 
