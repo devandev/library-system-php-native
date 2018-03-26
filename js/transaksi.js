@@ -6,7 +6,6 @@ function loadtransaksi(){
 }
 loadtransaksi();
 
-
 var btnTambah = $('.btn-tambah-data');
 btnTambah.on('click', function(){
     var idT = $('#id_transaksi').val();
@@ -50,8 +49,7 @@ $(document).on('click','.btn_update',function(){
     var col3 = currentRow.find("td:eq(2)").text();
     var col4 = currentRow.find("td:eq(3)").text();
     var col5 = currentRow.find("td:eq(4)").text();
-    var col6 = currentRow.find("td:eq(4)").text();
-    console.log(col2);
+    var col6 = currentRow.find("td:eq(5)").text();
     $('#id_transaksi_up').val(col1);
     $('#id_admin_up').val(col2);
     $('#id_anggota_up').val(col3);
@@ -59,4 +57,27 @@ $(document).on('click','.btn_update',function(){
     $('#waktu_pinjam_up').val(col5);
     $('#waktu_kembali_up').val(col6);
     $('.background-form-up').show();
+});
+
+var btnUp = $('#btn_update');
+btnUp.on('click',  function(){
+    var currentRow=$(this).closest("tr"); 
+    var col1 = currentRow.find("td:eq(0)").text(); 
+    var col2 = currentRow.find("td:eq(1)").text(); 
+    var col3 = currentRow.find("td:eq(2)").text();
+    var col4 = currentRow.find("td:eq(3)").text();
+    var col5 = currentRow.find("td:eq(4)").text();
+    var col6 = currentRow.find("td:eq(5)").text();
+    $.post('data_updateT.php',
+    {
+        id_transaksi : col1,
+        id_admin : col2,
+        id_anggota : col3,
+        id_buku : col4,
+        waktu_pinjam : col5,
+        waktu_kembali : col6
+    },
+    function(data){
+        loadtransaksi();
+    });
 });

@@ -30,11 +30,11 @@ $(document).ready(function(){
     $(document).on("click", ".btn_update", function(){
         var id_anggota = $(this).attr("id");
         var currentRow=$(this).closest("tr"); 
-         var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
-         var col2=currentRow.find("td:eq(1)").text(); // get current row 2nd TD
-         var col3=currentRow.find("td:eq(2)").text();
-         var col4=currentRow.find("td:eq(3)").text();
-         var col5=currentRow.find("td:eq(4)").text();
+        var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+        var col2=currentRow.find("td:eq(1)").text(); // get current row 2nd TD
+        var col3=currentRow.find("td:eq(2)").text();
+        var col4=currentRow.find("td:eq(3)").text();
+        var col5=currentRow.find("td:eq(4)").text();
          
          $("#id_anggota").val(col1);
          $("#nama_anggota").val(col2);
