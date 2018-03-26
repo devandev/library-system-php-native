@@ -1,7 +1,7 @@
 function loadpinjaman(){
     $.get('crudPeminjam/data_selectP.php',
     function(data){
-        $('.container').html(data);
+        $('.wraper').html(data);
     });
 }
 loadpinjaman();
@@ -9,7 +9,7 @@ loadpinjaman();
 function expired(){
     $.get('crudPeminjam/data_selectPExpired.php',
     function(data){
-        $('.container').html(data);
+        $('.wraper').html(data);
     });
 }
 
