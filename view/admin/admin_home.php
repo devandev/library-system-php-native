@@ -26,7 +26,7 @@
         } 
     ?>      
             <li><a id= "logo-nav" href="#">Welcome back <span class="user"><?php print $row[0] ;?></span></a></li>
-            <li><a id= "home-nav" href="#">Home</a></li>
+            <li><a id= "home-nav" href="admin_home.php">Home</a></li>
             <li><a id="member-nav" href="crudMember/select_Member.php">Member List</a></li>
             <li><a id="admin-nav" href="crudBuku/select_buku.php">Buku List</a></li>
             <li><a id="admin-nav" href="crudTransaksi/select_transaksi.php">Transaksi List</a></li>
@@ -34,16 +34,18 @@
         </ul>
     </nav>
     <?php include_once("../header.php") ?>
-    <form id="admin" method="post">
-        <label>Filter berdasarkan :</label>
-        <select name="filter" id="filter">
-            <option disabled selected>Pilih</option>
-            <option>All</option>
-            <option>Expired</option>
-        </select>
-    </form>
+    
     <div class="container">
-        
+        <form id="admin" method="post">
+            <label class="lb-filter">Filter berdasarkan :</label>
+            <select name="filter" id="filter">
+                <option disabled selected>Pilih</option>
+                <option>All</option>
+                <option>Expired</option>
+            </select>
+        </form>
+        <div class="wraper">
+        </div>
     </div>
     <?php
         mysqli_close($conn);
