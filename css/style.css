@@ -26,11 +26,40 @@ body{
     margin: 0 auto;
 }
 
+.wraper1{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 .container{
     width: 100%;
     max-width: 70%;
     display: block;
     margin: 0 auto;
+}
+
+.btn-tambah-data,
+.btn-back{
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #31dddd;
+    color: #008b8b;
+    border: #008b8b 3px solid;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.btn-back{
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.btn-back a{
+    text-decoration: none;
+    color: #008b8b;
 }
 
 /*
@@ -304,16 +333,15 @@ nav ul li a#logo-nav{
 table style
 =========================================
 */
-
 .tb-select{
     display: block;
     margin: 0 auto;
     border-collapse: collapse;
-    
 }
 
 .tb-title{
     position: relative;
+    text-align: center;
 }
 
 .btn-tambah-data{
@@ -404,5 +432,20 @@ form.update-form input{
 home admin style
 =========================================
 */
+
+form#admin{
+    width: 100%;
+    max-width:90%;
+    display: block;
+    margin: auto;
+}
+
+.lb-filter{
+    display: inline-block;
+} 
+#filter{
+    display: inline-block;
+    width: 100%;
+}
 
 
