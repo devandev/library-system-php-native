@@ -19,7 +19,6 @@
                     <th>Penyusun</th>
                     <th>Edit</th>
                     <th>Hapus</th>
-
                 </tr>
                 <?php 
                 while($row = mysqli_fetch_array($result)){ ?>
