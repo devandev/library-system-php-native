@@ -14,13 +14,38 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <h1>hallo member</h1>
-    <div class="btn-logout">
-        <a href="../../proccess/logout.php">logout</a>
-    </div>
+    <nav>
+        <ul>
+    <?php
+        include_once('../../proccess/connect.php');
+        $id = $_SESSION["id"];
+        $sql ="SELECT nama_anggota FROM tb_anggota WHERE nama_anggota = '$id'";
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result) > 0){ 
+            $row = mysqli_fetch_array($result);
+        } 
+    ?>      
+            <li><a id= "logo-nav" href="#">Welcome back <span class="user"><?php print $row[0] ;?></span></a></li>
+            <li><a id="admin-nav" href="crudBuku/select_buku.php">Buku List</a></li>
+            <li><a id="admin-nav" href="crudTransaksi/select_transaksi.php">Transaksi List</a></li>
+            <li><a id="logout" href="../../proccess/logout.php">logout</a></li>
+        </ul>
+    </nav>
+    <?php include_once('../header.php'); ?>
+        <div class="container tersedia">
+            
+        </div>
 
+        <div class="container tidakTersedia">
+            
+        </div>
+    <?php
+        mysqli_close($conn);
+        include_once("../footer.php");
+    ?>
     <script src="../../js/jquery-3.1.1.js"></script>
-    <script src="../../js/script.js"></script>    
+    <script src="../../js/script.js"></script>   
+    <script src="../../js/infobuku.js"></script>  
 </body>
 </html>
 
